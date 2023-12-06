@@ -559,9 +559,9 @@ OrphanRemoval works with one-to-one, one-to-many and many-to-many associations.
 .. note::
 
     When using the ``orphanRemoval=true`` option Doctrine makes the assumption
-    that the entities are privately owned and will **NOT** be reused by other entities.
-    If you neglect this assumption your entities will get deleted by Doctrine even if
-    you assigned the orphaned entity to another one.
+    that instances of entity `B` may only exist when an instance of `A` references
+    them. Your entities instances will get deleted by Doctrine even if you assigned the
+    orphaned entity instance to an instance of a different entity class.
 
 .. note::
 
